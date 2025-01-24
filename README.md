@@ -7,5 +7,20 @@ Java is a great language to begin learning as it is object-oriented, widely used
 **Ways of Working**
 
 Projects will be moved from the Backlog and tickets worked on and reviewed weekly.
-All tickets will require a review prior to merging.
-This README will be updated in detail on each exercise as each area of the project is developed.
+
+Rules:
+
+* Main branch must be protected
+* PRs need review
+* PRs must have comments addressed
+* PR checks must be green
+
+
+Day to day:
+
+* Issues must be regularly updated with current status
+* Branch Names should follow a standard naming convention, by issue name and what the branch is working on e.g:
+  * data-struc/exercise-1
+* Commits should state what has been modified
+* PRs must be linked to and issue: which will be done by linking it in its description
+* README to be updated in detail on each exercise as each area of the project is developed.
