@@ -1,0 +1,39 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+group 'com.kalschatzi'
+version '1.0-SNAPSHOT'
+
+
+ext {
+    javaMainClass = "com.kalschatzi.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+wrapper {
+    gradleVersion = 8.12
+}
+
+task testPrint{
+    doLast {
+        println("This is a test")
+    }
+}

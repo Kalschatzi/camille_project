@@ -24,3 +24,13 @@ Day to day:
 * Commits should state what has been modified
 * PRs must be linked to and issue: which will be done by linking it in its description
 * README to be updated in detail on each exercise as each area of the project is developed.
+
+
+# Usage
+
+A Makefile was created and should be our interface for all commands.
+Usage is `make <taskName>`
+Created a basic java application that has the following makefile tasks:
+* build-java - builds the app
+* test-java - executes tests
+* run-java - runs the application
