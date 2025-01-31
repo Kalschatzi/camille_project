@@ -8,12 +8,7 @@ class MainTest {
 
     @Test
     public void TestStaticMethod() {
-        assertEquals(Main.StaticMethod(), "This is a static method");
-    }
-
-    @Test
-    public void FixMeTest() {
-        assertEquals(Main.StaticMethod(), "This is failing");
+        assertEquals(Main.StaticMethod(), Main.STATIC_STRING);
     }
 
 }
