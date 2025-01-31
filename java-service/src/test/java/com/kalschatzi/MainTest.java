@@ -1,0 +1,19 @@
+package com.kalschatzi;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class MainTest {
+
+    @Test
+    public void TestStaticMethod() {
+        assertEquals(Main.StaticMethod(), "This is a static method");
+    }
+
+    @Test
+    public void FixMeTest() {
+        assertEquals(Main.StaticMethod(), "This is failing");
+    }
+
+}
