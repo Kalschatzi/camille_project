@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class FriendArrayListTest {
     private Friend friendObject;
     private ArrayList<String> friends;
@@ -13,7 +15,7 @@ public class FriendArrayListTest {
     @BeforeEach
     public void setup(){
         friends = new ArrayList<>();
-        friendObject = new Friend();
+       // friendObject = new Friend();
         friends.add("John");
         friends.add("Yanny");
         friends.add("Michael");
@@ -22,18 +24,19 @@ public class FriendArrayListTest {
 
     @Test
     public void getSizeTest() {
-        int size = friendObject.getSize(friends);
-        System.out.println(size);
+        int size = friends.size();
+        assertEquals(4, size);
 
     }
     @Test
     public void removeElement() {
-        friends.remove(2);
+        assertEquals("Michael", friends.remove(2));
         System.out.println(friends);
     }
 
     @Test
     public void getFirstElement() {
+        assertEquals("John", friends.get(0));
         System.out.println(friends.get(0));
     }
 
@@ -48,6 +51,13 @@ public class FriendArrayListTest {
     public void sortList() {
         Collections.sort(friends);
         System.out.println(friends);
+    }
+
+    @Test
+    public void friendName() {
+        Friend friendly = new Friend("John");
+        assertEquals(friendly.getName(), "John");
+        System.out.println();
     }
 
 }
