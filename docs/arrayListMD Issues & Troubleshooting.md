@@ -12,9 +12,15 @@ ssh-keygen
 ```
 This generates and public and private key pair.  The public key will be stored in your /home/file-path/.ssh/id_ and the private can be saved in a location of your choice.  It's a good security recommendation to use a password when generating ssh keys, however, it's not essential.<br>
 Log into GitHub --> Settings-->SSH and GPG keys-->, then copy and paste the ssh *public key* into the space provided.  It should then allow the pushing and pulling of code as long as you have the permissions to do so in that repository.
+Additionally, in the local machine use
+```bash
+git remote set-url origin git@github.com:Kalschatzi/camille_project.git
 
-
-
+```
+Confirm using:
+```bash
+git remote -v
+```
 
 <h3>**Creating a code block**</h3>
 
