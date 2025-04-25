@@ -3,54 +3,60 @@ package com.kalschatzi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.ListIterator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CamilleArrayListTest {
+public class CamilleArrayTest {
     private List<String> friends;
 
     @BeforeEach
     public void setup(){
-        friends = new CamilleArrayList<>();
-       // friendObject = new Friend();
+        friends = new CamilleArray<>();
         friends.add("John");
-        friends.add("Yanny");
+        friends.add("Neela");
         friends.add("Michael");
         friends.add("Chenelle");
+
     }
 
     @Test
     public void getSizeTest() {
         int size = friends.size();
         assertEquals(4, size);
-
     }
+
     @Test
     public void removeElement() {
-        assertEquals("Michael", friends.remove(2));
-        System.out.println(friends);
+        String name = friends.remove(2);
+        assertEquals("Michael", name);
+        System.out.println(" Element removed: " + name);
     }
 
     @Test
     public void getFirstElement() {
-        assertEquals("John", friends.get(0));
-        System.out.println(friends.get(0));
+        String firstElement = friends.get(0);
+
+        assertEquals("John", firstElement);
     }
 
     @Test
-    public void loopOverList() {
-        for (String name : friends) {
-            System.out.println(name);
-        }
+    public void searchByIndexTest() {
+        ListIterator<String> friendsIterator =
+                friends.listIterator(1);
+
+        String friend = friendsIterator.next();
+        assertEquals("Neela", friend);
     }
 
     @Test
     public void sortList() {
         Collections.sort(friends);
-        System.out.println(friends);
+
+        assertEquals("Chenelle", friends.getFirst());
+        assertEquals("Neela", friends.getLast());
     }
 
     @Test

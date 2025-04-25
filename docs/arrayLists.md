@@ -13,6 +13,48 @@ The size of an ArrayList is not set and can grow and shrink automatically (dynam
 Time complexity is the measurement of how much time an algorithm is required to execute.  For example, if in the case of searching for an element at the end of an Arraylist would take much less time complexity than searching for an element in the middle of the list.
 In an ArrayList, to search for an element depends on the length of the array.  Therefore, the time complexity of an ArrayList is known as O(n)-with 'n' representing the length of the list and 'O' representing the order of the function.
 
+
+
+### Time Complexity of ArrayList Operations
+
+| **Operation**               | **Time Complexity** | **Explanation**                                                                 |
+|-----------------------------|---------------------|---------------------------------------------------------------------------------|
+| **Add to end**              | O(1) amortized      | Adding to the end is O(1) unless resizing is needed, which is O(n). Resizing is rare, so it's amortized O(1). |
+| **Add at beginning**        | O(n)                | All elements must be shifted to the right to make space for the new element.    |
+| **Add at any index**        | O(n)                | Elements after the insertion point must be shifted to the right.                |
+| **Remove from end**         | O(1)                | No shifting is needed; simply decrement the size.                               |
+| **Remove from beginning**   | O(n)                | All elements must be shifted to the left to fill the gap.                       |
+| **Remove from any index**   | O(n)                | Elements after the removal point must be shifted to the left.                   |
+| **Search by value**         | O(n)                | In the worst case, the element might be at the end or not present at all.       |
+| **Search by index (get)**   | O(1)                | Direct access to the element using the index.                                   |
+| **Update by index (set)**   | O(1)                | Direct access to the element using the index.                                   |
+| **Contains (check if exists)** | O(n)             | Requires iterating through the list to find the element.                        |
+| **Clear**                   | O(n)                | All elements are set to `null`, and the size is reset to 0.                     |
+| **Iterator operations**     | O(1) per operation  | `next()` and `hasNext()` are O(1) for each element.                             |
+
+### Notes:
+
+1. **Amortized O(1) for Add to End**:
+    - Most of the time, adding to the end is O(1).
+    - When the array is full, resizing takes O(n), but this happens infrequently, so the **amortized cost** is O(1).
+
+2. **O(n) for Add/Remove at Beginning or Middle**:
+    - These operations require shifting elements, which takes O(n) time in the worst case.
+
+3. **O(1) for Access by Index**:
+    - `ArrayList` is backed by an array, so accessing elements by index is a constant-time operation.
+
+4. **O(n) for Search by Value**:
+    - Searching for an element by value requires iterating through the list, which takes O(n) in the worst case.
+
+---
+
+### Example Use Cases:
+
+- **Frequent Access by Index**: Use `ArrayList` for O(1) access.
+- **Frequent Add/Remove at End**: Use `ArrayList` for amortized O(1) performance.
+- **Frequent Add/Remove at Beginning or Middle**: Consider using a `LinkedList` for O(1) add/remove at the beginning and O(n) for the middle.
+
 Code examples:
 
 
