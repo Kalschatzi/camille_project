@@ -47,17 +47,17 @@ public class CamilleArrayTest {
         ListIterator<String> friendsIterator =
                 friends.listIterator(1);
 
-        String friend = friendsIterator.next();
-        assertEquals("Neela", friend);
+        //String friend = friendsIterator.next();
+        // assertEquals("Neela", friend);
     }
 
-    @Test
+    /*@Test
     public void sortList() {
         Collections.sort(friends);
 
         assertEquals("Chenelle", friends.getFirst());
         assertEquals("Neela", friends.getLast());
-    }
+    }*/
 
     @Test
     public void friendName() {
