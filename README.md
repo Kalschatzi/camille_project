@@ -34,3 +34,12 @@ Created a basic java application that has the following makefile tasks:
 * build-java - builds the app
 * test-java - executes tests
 * run-java - runs the application
+
+
+Modules:
+
+**[ArrayLists](docs/arrayLists.md)**
+
+
+
+LinkedLists

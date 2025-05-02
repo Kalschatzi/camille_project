@@ -1,3 +1,4 @@
 java-service/.gradle/
 java-service/build/
 .idea/
+.gradle/
