@@ -62,7 +62,7 @@ public class CamilleArray<T> implements List<T> {
     @Override
     // what the method does ? accepts = ?? returns = ??
     public T remove(int positionToRemove) {
-        //
+        // creates a new array of objects
         Object[] newElements = new Object[elements.length - 1];
         //
         for (int position = 0; position < elements.length - 1; position++) {

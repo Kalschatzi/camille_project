@@ -70,7 +70,7 @@ Code examples:
     public static void main(String[] args) {
         ArrayList<String> friendsArrayList = new ArrayList<>();
         friendsArrayList.add("John");
-        friendsArrayList.add("Yanny");
+        friendsArrayList.add("Neela");
         friendsArrayList.add("Michael");
         friendsArrayList.add("Chenelle");
         System.out.println(friendsArrayList);
@@ -115,7 +115,7 @@ Code examples:
 **Create and print the elements of the ArrayList**.
 ```java
    
-    [John, Yanny, Michael, Chenelle]
+    [John, Neela, Michael, Chenelle]
 
 ```
 **Determine the size of the ArrayList.**
@@ -124,16 +124,16 @@ Code examples:
 ```
 **Remove an element from the ArrayList and print the list.**
 ```java
-    [John, Yanny, Chenelle]
+    [John, Neela, Chenelle]
 ```
 **Loop over each element of the list and print it.**
 ```java
     John
-    Yanny
+    Neela
     Chenelle
 ```
 **Sort the elements in the ArrayList**
 ```java
-    [Chenelle, John, Yanny]
+    [Chenelle, John, Neela]
 
 ```    
