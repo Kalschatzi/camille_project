@@ -15,13 +15,6 @@ public class CamilleArray<T> implements List<T> {
 
     @Override
     public boolean add(Object value) {
-        int i = 5;
-        int a = i++; // assign i to a, then increment it
-        int b = ++i; // increment i then add 1  // pre incrementer
-
-        // object array elements [int size of the elements array then it's adding 1]
-        // the value is assigned to the position of the index in the elements array
-        // the size tells us the position of the end of the array,
         // therefore we are adding a value to the "end of the array" (size + 1 or size++)
         elements[size++] = value; // elements[size + 1] = value
 
@@ -42,7 +35,6 @@ public class CamilleArray<T> implements List<T> {
 
 
 
-
     // takes an object, and returns an index of that object
     private int searchIndex(Object value) { // "Neela"
         for (int i = 0; i < elements.length; i++) {
@@ -56,13 +48,13 @@ public class CamilleArray<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        return null; //list.get(index);
+        return (T) elements[index];
     }
 
     @Override
     // what the method does ? accepts = ?? returns = ??
     public T remove(int positionToRemove) {
-        // creates a new array of objects
+        // creates a new array of objects with the
         Object[] newElements = new Object[elements.length - 1];
         //
         for (int position = 0; position < elements.length - 1; position++) {

@@ -14,6 +14,7 @@ public class CamilleArrayTest {
 
     @BeforeEach
     public void setup(){
+        System.out.println("Setup in progress...");
         friends = new CamilleArray<>();
         friends.add("John");
         friends.add("Neela");
@@ -38,7 +39,6 @@ public class CamilleArrayTest {
     @Test
     public void getFirstElement() {
         String firstElement = friends.get(0);
-
         assertEquals("John", firstElement);
     }
 
